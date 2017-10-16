@@ -34,7 +34,7 @@ contactForm.addEventListener("submit", function(event) {
 	} 
 	if (fname.length > 0 && lname.length > 0 && subject.length > 0 
 		&& message.length > 0) {
-		contactDiv.innerHTML= "message has been sent!";
+		contactDiv.innerHTML= "Your message has been sent!";
 	}
 
 	if (contactDiv.innerHTML != "Your message has not been sent!") {

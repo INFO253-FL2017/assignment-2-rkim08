@@ -59,33 +59,6 @@ def blog_what():
 def show_email_page():
   return render_template("contact.html", notifications=[])
 
-# @app.route('/contact', methods=['POST'])
-# def send_email():
-#     message = request.form.get("message")
-#     subject = request.form.get("subject")
-#     name = request.form.get("firstname")
-#     notifications = []
-
-#     data = {
-#         'from': 'rachel <rkim08@sandboxdee063edd9034d2a95668740a304ba67.mailgun.org>',
-#         'to': 'rkim08@sandboxdee063edd9034d2a95668740a304ba67.mailgun.org',
-#         'subject': "hi",
-#         'text': "test",
-#     }
-#     auth = ('api', 'key-6b87a9c12af7e25199513c30269ba80b')
-#     r = requests.post(
-#         'https://api.mailgun.net/v3/sandboxdee063edd9034d2a95668740a304ba67.mailgun.org',
-#         auth=auth,
-#         data=data)
-#     if r.status_code == requests.codes.ok:
-#         notifications.append("Your email was sent")
-#     else:
-#         notifications.append("You email was not sent. Please try again later")
-
-
-
-#     return render_template("contact.html", notifications=notifications)
-
 
 @app.route('/contact', methods=['POST'])
 def send_email():
